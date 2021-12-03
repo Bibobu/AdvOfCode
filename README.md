@@ -1,4 +1,4 @@
-This repo is for my solutions of the [Advent of Code][https://adventofcode.com]
+This repo is for my solutions of the [Advent of Code](https://adventofcode.com)
 annual event. As a very narcissic person I share them for the whole world to
 see how shitty my coding skills are. (For people who would not get it,
 this is sarcasm).

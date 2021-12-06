@@ -1,0 +1,60 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+'''
+Your docstring here
+'''
+
+import numpy as np
+from scipy.optimize import curve_fit
+
+rank = 0
+
+class Fish:
+    def __init__(self, counter, rank=0):
+        self.counter = counter
+        self.rank = rank
+
+    def check(self, fish):
+        if self.counter == 0:
+            self.counter = 6
+            fish.append(Fish(9))
+        else:
+            self.counter -= 1
+
+    def __repr__(self):
+        return str(self.counter)
+
+def read_input(filename):
+    with open(filename, 'r') as f:
+        line = f.readline().strip().split(',')
+        data = list(map(int, line))
+    return data
+
+def sol1(filename, ndays):
+    data = read_input(filename)
+    fish = []
+    print("Sol 1:")
+    for d in data:
+        fish.append(Fish(d))
+    for i in range(ndays):
+        for f in fish:
+            f.check(fish)
+        print(i)
+    print("Day: {}, Number of fish: {}".format(i+1, len(fish)))
+
+
+def main():
+
+    filename = 'input'
+    ndays = 80
+    sol1(filename, ndays)
+    return
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        raise SystemExit("User interruption.")
+

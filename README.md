@@ -14,3 +14,5 @@ solving the puzzle for some time. You will learn nothing reading other
 people solutions if you don't think about it yourself first.
 
 If you have any remark or advice to share, do not hesitate to reach me.
+
+Obviously inputs are the one associated with MY account. So use yours.

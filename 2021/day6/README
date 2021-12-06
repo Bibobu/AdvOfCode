@@ -1,0 +1,7 @@
+I fell in the trap of making a class per fish.
+
+I advise you to run code1 with the number of days of part 2 as a parameter
+before looking at code2 to understand the problem of this approach.
+
+I am pretty sure there is a nice modula algebra formula to get it cleanly
+but I fell for the quick and dirty approach of computing it explicitely.

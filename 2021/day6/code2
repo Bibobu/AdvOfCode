@@ -1,0 +1,54 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+
+class Shoal:
+    def __init__(self, fish):
+        self.pop = {}
+        for i in range(9):
+            self.pop[i] = 0
+        for f in fish:
+            self.pop[f] += 1
+
+    def sum(self):
+        s = 0
+        for i in range(9):
+            s += self.pop[i]
+        return s
+
+    def step(self):
+        newpop = {8:0}
+        for i in range(7, -1, -1):
+            newpop[i] = self.pop[i+1]
+        newpop[6] += self.pop[0]
+        newpop[8] += self.pop[0]
+        self.pop = newpop
+
+def read_input(filename):
+    with open(filename, 'r') as f:
+        line = f.readline().strip().split(',')
+        data = list(map(int, line))
+    return data
+
+def sol2(filename, days):
+    data = read_input(filename)
+    my_shoal = Shoal(data)
+    for _ in range(days):
+        my_shoal.step()
+    print(my_shoal.sum())
+
+def main():
+
+    filename = 'input'
+    days = 256
+    sol2(filename, days)
+
+    return
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        raise SystemExit("User interruption.")
+

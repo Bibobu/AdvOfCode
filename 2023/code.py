@@ -12,7 +12,7 @@ def solve1(file=None, verbose=False, solution=0):
     try:
         with open(file, 'r') as f:
             pass
-    except ValueError:
+    except FileNotFoundError:
         pass
 
     return solution
@@ -21,7 +21,7 @@ def solve2(file=None, verbose=False, solution=0):
     try:
         with open(file, 'r') as f:
             pass
-    except ValueError:
+    except FileNotFoundError:
         pass
 
     return solution
